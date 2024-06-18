@@ -22,7 +22,7 @@
  final-text: "<br>"
 
  buttons: (list
-  (make-link "Articles" "articles.html")
+  (make-link "Archives" "articles.html")
   (make-link "RSS" "articles.rss")
   ; (make-link "Bio" "bio.html")
   (make-link "Twitter" "https://twitter.com/theshawwn")
