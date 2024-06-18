@@ -1,0 +1,67 @@
+(title: "Test" hidden: t)
+June 2024
+
+This is a test page.
+
+It's obviously true that this is a test page.
+<font color=#dddddd>[<a href="#f1n"><font color=#dddddd>1</font></a>]</font>
+
+
+
+
+This is the main text.
+
+This is a formula:
+<i>p</i> over time <i>t</i> would be proportional to <i>p<sup>t</sup></i>.
+
+Even after decades of thinking about this, I find this test page
+startling.
+
+@(tag b "Header")
+
+@(tag font size: 2 face: 'verdana
+   (tag table width: 410 cellspacing: 0
+     (tr
+       (tdcolor (color 0xff 0xcc 0x33)
+         (spacer 15)
+         (tag font size: 2 (prn)
+           (tag b "New:") (prn)
+           (link "Superlinear Returns" "http://paulgraham.com/superlinear.html")
+           (prn " |")
+           (link "How to Do Great Work" "http://paulgraham.com/greatwork.html")
+           (prn))
+         (br)
+         (spacer 5))))
+   (tag table width: 410 cellspacing: 0
+     (tr
+       (tdcolor (color 0xff 0x99 0x22)
+         (spacer 15)
+         (tag font size: 2 (prn)
+           (tag b "Want to start a startup?")
+           " Get funded by " (link "Y Combinator" "http://ycombinator.com/apply.html") "."
+           (prn))
+         (br)
+         (spacer 5)))))
+
+
+
+
+This is the outro.
+
+
+
+
+
+
+
+
+
+<b>Notes</b>
+
+[<a name="f1n"><font color=#000000>1</font></a>]
+This is a footnote.
+
+
+<font color="888888"><b>Thanks</b> 
+to me, myself, and I for reading drafts
+of this.</font>

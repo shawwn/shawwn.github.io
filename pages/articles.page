@@ -1,0 +1,20 @@
+(title: "Articles"
+ contents: (list
+   'test
+ )
+ margin-bottom: false
+ bullet-inline: true
+ bottom-text: (tostring
+                (br2)
+                (link "RSS" (rss-url)) (prn " feed")
+                (br2))
+)
+<!--
+If you're not sure which to read, try 
+<a href="wisdom.html"><u>Is it Worth Being Wise?</u></a>,
+<a href="kids.html"><u>Having Kids</u></a>,
+or 
+<a href="selfindulgence.html"><u>How to Lose Time and Money</u></a>.
+-->
+
+

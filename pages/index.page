@@ -1,0 +1,35 @@
+(site-name: "Shawn Presser"
+ site-desc: "Shawn Presser"
+ site-url: "https://shawwn.github.io/"
+ author: "shawwn"
+ ;favicon-url: "http://ycombinator.com/arc/arc.png"
+ favicon-url: "favicon.ico"
+ rss-url: "articles.rss"
+ rss-desc: ""
+ text-color: black
+ link-color: (color 0 0 0x66)
+ visited-link-color: (color 0x46 0x46 0x46)
+ site-image: (obj url:    "https://user-images.githubusercontent.com/59632/213842621-78c527ed-c657-4126-b27d-2670f35fb053.png"
+                  type:   "image/png"
+                  width:  512
+                  height: 512)
+ bullet-url:        "https://s.turbifycdn.com/aah/paulgraham/how-to-get-new-ideas-5.gif"
+ bullet-width:      12
+ bullet-thin-url:   "https://s.turbifycdn.com/aah/paulgraham/serious-2.gif"
+ bullet-thin-width: 6
+
+ caption: "<br>"
+ final-text: "<br>"
+
+ buttons: (list
+  (make-link "Articles" "articles.html")
+  (make-link "RSS" "articles.rss")
+  ; (make-link "Bio" "bio.html")
+  (make-link "Twitter" "https://twitter.com/theshawwn")
+  (make-link "HN" "https://news.ycombinator.com/threads?id=sillysaurusx")
+  (make-link "Github" "https://github.com/shawwn")
+  [if (is @!id 'index) (make-link "Index" "ind.html")]
+  ;[if (is @!id 'index) (make-link "About" "info.html")]
+  [if (is @!id 'index) (make-link "Email" "mailto:shawnpresser@@gmail.com")]
+ )
+)
