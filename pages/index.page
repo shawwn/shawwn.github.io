@@ -1,6 +1,7 @@
 (site-name: "Shawn Presser"
  site-desc: "Shawn Presser: Archives"
  site-url: "https://shawwn.github.io/"
+ site-gtag-id: "G-VSSBKPV516"
  author: "shawwn"
  banner-size:    62
  banner-kerning: 0
