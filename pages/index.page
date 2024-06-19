@@ -1,8 +1,15 @@
 (site-name: "Shawn Presser"
  site-desc: "Shawn Presser: Archives"
  site-url: "https://shawwn.github.io/"
- site-gtag-id: "G-VSSBKPV516"
  author: "shawwn"
+
+ gtag: t
+ gtag-site-id: "G-VSSBKPV516"
+
+ matomo: t
+ matomo-cloud-id: "shawwn"
+ matomo-site-id: "1"
+
  banner-size:    62
  banner-kerning: 0
  ;favicon-url: "http://ycombinator.com/arc/arc.png"
