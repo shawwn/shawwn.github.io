@@ -37,7 +37,7 @@
   ; (make-link "Bio" "bio.html")
   (make-link "Twitter" "https://twitter.com/theshawwn")
   (make-link "HN" "https://news.ycombinator.com/threads?id=sillysaurusx")
-  (make-link "Github" "https://github.com/shawwn")
+  (make-link "Github" "https://github.com/shawwn/shawwn.github.io")
   [if (is @!id 'index) (make-link "Index" "ind.html")]
   ;[if (is @!id 'index) (make-link "About" "info.html")]
   [if (is @!id 'index) (make-link "Email" "mailto:shawnpresser@@gmail.com")]
