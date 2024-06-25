@@ -44,6 +44,13 @@ startling.
          (spacer 5)))))
 
 
+Links:
+<ul>
+<li>@(link "diff History for Neural Language Agents" "https://arxiv.org/abs/2312.07540")</li>
+<li>@(link "source code" "https://github.com/shawwn/shawwn.github.io")</li>
+</ul>
+
+
 
 
 This is the outro.
