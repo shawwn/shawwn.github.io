@@ -3,18 +3,10 @@
 )
 @(link "June 2024" (repo-url "pages/sphere.page"))
 
-<!--
-$$
-\newcommand{\ceil}[1]{\lceil {#1} \rceil}
-\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
-$$
-When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
--->
 The volume of a unit @(link "sphere" "https://en.wikipedia.org/wiki/Ball_(mathematics)")
 in \(N\) dimensions is
 $$
-f(N) = \frac{(2\pi)^{(N//2)}}{ (N!!) (2)^{ {(-1)}^N } }
+  f(N) = \frac{(2\pi)^{(N//2)}}{ (N!!) (2)^{ {(-1)}^N } }
 \tag{1}$$
 
 where \(N//2\) is
