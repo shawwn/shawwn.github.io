@@ -1,5 +1,5 @@
 (title: "Test" hidden: t)
-June 2024
+@(link "June 2024" (repo-url "pages/test.page"))
 
 This is a test page.
 
