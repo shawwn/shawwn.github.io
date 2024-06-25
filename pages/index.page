@@ -31,14 +31,22 @@
  caption: "<br>"
  final-text: "<br>"
 
+ mathjax: "
+<script src=\"https://polyfill.io/v3/polyfill.min.js?features=es6\"></script>
+<script type=\"text/javascript\" id=\"MathJax-script\"
+  src=\"https://cdn.jsdelivr.net/npm/mathjax@@3/es5/tex-chtml.js\"></script>
+"
+
  buttons: (list
   (make-link "Archives" "articles.html")
+  (make-link "Notebook" "notes.html")
   (make-link "RSS" "articles.rss")
   ; (make-link "Bio" "bio.html")
   (make-link "Twitter" "https://twitter.com/theshawwn")
   (make-link "HN" "https://news.ycombinator.com/threads?id=sillysaurusx")
   (make-link "Github" "https://github.com/shawwn/shawwn.github.io")
-  [if (is @!id 'index) (make-link "Index" "ind.html")]
+  ;[if (is @!id 'index) (make-link "Index" "ind.html")]
+  (make-link "Index" "ind.html")
   ;[if (is @!id 'index) (make-link "About" "info.html")]
   [if (is @!id 'index) (make-link "Email" "mailto:shawnpresser@@gmail.com")]
  )

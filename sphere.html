@@ -1,0 +1,99 @@
+<html><head><meta property="og:type" content="website"><meta property="og:title" content="Volume and surface area of a sphere in any dimensions"><meta property="og:site_name" content="Shawn Presser"><meta property="og:image" content="https://user-images.githubusercontent.com/59632/213842621-78c527ed-c657-4126-b27d-2670f35fb053.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="512"><meta property="og:image:height" content="512"><title>Volume and surface area of a sphere in any dimensions</title><link rel="shortcut icon" href="favicon.ico">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSSBKPV516"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VSSBKPV516');
+</script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://shawwn.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/shawwn.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://shawwn.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+</head><body text=#000000 link=#000066 vlink=#464646><table border=0 cellspacing=0 cellpadding=0><tr valign=top><td><a href="index.html"><img src="index-1.png" width=67 height=21 border=0 hspace=0 vspace=0></a><br>
+<a href="articles.html"><img src="index-2.png" width=67 height=21 border=0 hspace=0 vspace=0></a><br>
+<a href="notes.html"><img src="index-3.png" width=67 height=21 border=0 hspace=0 vspace=0></a><br>
+<a href="articles.rss"><img src="index-4.png" width=67 height=21 border=0 hspace=0 vspace=0></a><br>
+<a href="https://twitter.com/theshawwn"><img src="index-5.png" width=67 height=21 border=0 hspace=0 vspace=0></a><br>
+<a href="https://news.ycombinator.com/threads?id=sillysaurusx"><img src="index-6.png" width=67 height=21 border=0 hspace=0 vspace=0></a><br>
+<a href="https://github.com/shawwn/shawwn.github.io"><img src="index-7.png" width=67 height=21 border=0 hspace=0 vspace=0></a><br>
+<a href="ind.html"><img src="index-8.png" width=67 height=21 border=0 hspace=0 vspace=0></a><br>
+</td><td><img src="https://sep.turbifycdn.com/ca/Img/trans_1x1.gif" height=1 width=28 border=0></td><td><a href="index.html"><img src="index-10.png" width=414 height=45 border=0 hspace=0 vspace=0></a><br><br>
+<table border=0 cellspacing=0 cellpadding=0 width=435><tr valign=top><td width=435><img src="volume-and-surface-area-of-a-sphere-in-any-dimensions-1.png" height=18 border=0 hspace=0 vspace=0 alt="Volume and surface area of a sphere in any dimensions"><br><br>
+<font size=2 face="verdana">
+<!--
+$$
+\newcommand{\ceil}[1]{\lceil {#1} \rceil}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+$$
+When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+-->
+The volume of a unit <a href="https://en.wikipedia.org/wiki/Ball_(mathematics)">sphere</a>
+in \(N\) dimensions is
+$$
+f(N) = \frac{(2\pi)^{(N//2)}}{ (N!!) (2)^{ {(-1)}^N } }
+\tag{1}$$<br /><br />where \(N//2\) is
+<a href="https://mathworld.wolfram.com/IntegerDivision.html">integer division</a>,
+and \(N!!\) is the
+<a href="https://en.wikipedia.org/wiki/Double_factorial">double factorial</a>.<br /><br />For a sphere with radius \(R\),<br /><br />$$
+  Volume = R^N f(N)
+\tag{2}$$
+$$
+  Surface Area = \frac{d}{dR} Volume = N R^{(N-1)} f(N)
+\tag{3}$$<br /><br />
+<img src="volume-and-surface-area-of-a-sphere-in-any-dimensions-2.png" height=18 border=0 hspace=0 vspace=0 alt="Python code"><br /><br /><pre>
+import math<br /><br /># <a href="/https://en.wikipedia.org/wiki/Double_factorial">https://en.wikipedia.org/wiki/Double_factorial</a>
+def double_factorial(n):
+  r = 1
+  m = math.ceil(n/2) - 1
+  for k in range(m):
+    r *= (n - 2*k)
+  return r<br /><br />def unit_volume(N):
+  return (2*math.pi)**(N//2) / double_factorial(N) / 2**(-1)**N<br /><br />def volume(N, r=1.0):
+  return unit_volume(N) * r**N<br /><br />def surface_area(N, r=1.0):
+  return unit_volume(N) * N*r**(N-1)<br /><br />def circle_area(r):
+  return volume(2, r)<br /><br />def circle_perimeter(r):
+  return surface_area(2, r)<br /><br />def sphere_volume(r):
+  return volume(3, r)<br /><br />def sphere_surface_area(r):
+  return surface_area(3, r)<br /><br /># >>> sphere_surface_area(12)
+# 1809.5573684677208
+#
+# >>> sphere_surface_area(0.5)
+# 3.141592653589793
+#
+# >>> sphere_volume(12)
+# 7238.229473870882
+#
+# >>> sphere_volume(0.5)
+# 0.5235987755982988
+#
+# >>> circle_area(12)
+# 452.3893421169302
+#
+# >>> circle_perimeter(12)
+# 75.39822368615503
+</pre><br /><br /><img src="volume-and-surface-area-of-a-sphere-in-any-dimensions-3.png" height=18 border=0 hspace=0 vspace=0 alt="Twitter thread"><br /><br /><a href="https://twitter.com/theshawwn/status/1795220263241429212">link</a> | <a href="https://nitter.poast.org/theshawwn/status/1795220263241429212">nitter</a><br /><br /><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">I derived a formula for the volume or surface area of an N-dimensional sphere:<br><br>(2pi)^(N//2) / N!! / 2^(-1)^N<br><br>That&#39;s the volume of a unit sphere of N dimensions.<br><br>Multiply it by radius^N to get any sphere&#39;s volume,<br>or by N*radius^(N-1) to get surface area.<br><br>Thread &amp; code:</p>&mdash; Shawn Presser (&#64;theshawwn) <a href="https://twitter.com/theshawwn/status/1795220263241429212?ref_src=twsrc%5Etfw">May 27, 2024</a></blockquote>
+</font></td></tr></table><br><br><table border=0 cellspacing=0 cellpadding=0 width=435><tr><td><font size=2 face="verdana"><br><br>
+<hr></font></td></tr></table></td></tr></table></body></html>

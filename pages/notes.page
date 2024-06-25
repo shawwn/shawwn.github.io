@@ -1,0 +1,6 @@
+(title: "Notebook")
+
+@(display-text "Math")
+<ul>
+<li>@{render-object!sphere}</li>
+</ul>
