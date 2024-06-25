@@ -47,7 +47,9 @@ startling.
 Links:
 <ul>
 <li>@(link "diff History for Neural Language Agents" "https://arxiv.org/abs/2312.07540")</li>
-<li>@(link "source code" "https://github.com/shawwn/shawwn.github.io")</li>
+<li>@(link "Source code" "https://github.com/shawwn/shawwn.github.io")</li>
+<li>@(link "Volume of an n-ball" "https://en.wikipedia.org/wiki/Volume_of_an_n-ball")</li>
+<li>@(link "Round Rects Are Everywhere" "https://news.ycombinator.com/item?id=40781838")</li>
 </ul>
 
 
