@@ -1,5 +1,10 @@
 (title: "Notebook")
 
+@(display-text "General")
+<ul>
+<li>@(link "Bookmarks" "https://shawwn.notion.site/c1731404becb42d1a1dd913152e94013")</li>
+</ul>
+
 @(display-text "Math")
 <ul>
 <li>@{render-object!sphere}</li>
