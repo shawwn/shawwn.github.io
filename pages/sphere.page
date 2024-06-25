@@ -1,5 +1,5 @@
 (title: "Volume and surface area of a sphere in any dimensions"
- head: @!mathjax
+ head-tags: @!mathjax
 )
 <!--
 $$
